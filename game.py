@@ -3,11 +3,17 @@ from termcolor import cprint
 cprint(figlet_format('Tic Tac Toe',font='big'))
 print ("Enter the size of the board separated by space")
 print ("min = {}x{} , max = {}x{}".format(3,3,10,10))
-r , c = [int(i) for i in input().split()]
+try:
+    r , c = [int(i) for i in input().split()]
+except:
+    print ("Not enough value")
+    exit()
 if r != c:
     raise ValueError('Different values for Row and column')
 if r < 3 or c < 3:
     raise ValueError('Values of Row and column cannot be less than 3')
+if r > 10 or c > 10:
+    raise ValueError('Values of Row and column cannot be more than 10')
 print("Row and column reference for 3x3 board:")
 m = [["*" for i in range(r)] for j in range(c)]
 print("00|01|02\n__|__|__\n10|11|12\n__|__|__\n20|21|22")
