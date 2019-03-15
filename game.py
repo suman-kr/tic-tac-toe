@@ -1,8 +1,10 @@
 from pyfiglet import figlet_format
 from termcolor import cprint
 cprint(figlet_format('Tic Tac Toe',font='big'))
+print ("\n Copyright © Suman Kumar")
 print ("Enter the size of the board separated by space")
 print ("min = {}x{} , max = {}x{}".format(3,3,10,10))
+print ("\n Copyright © Suman Kumar")
 try:
     r , c = [int(i) for i in input().split()]
 except:
