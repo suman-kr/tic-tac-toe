@@ -17,7 +17,6 @@ if r > 10 or c > 10:
     raise ValueError('Values of Row and column cannot be more than 10')
 print("Row and column reference for 3x3 board:")
 m = [["*" for i in range(r)] for j in range(c)]
-print("00|01|02\n__|__|__\n10|11|12\n__|__|__\n20|21|22")
 
 print("Co-ordinate examples for {}x{} board".format(r,c))
 for i in range(r):
